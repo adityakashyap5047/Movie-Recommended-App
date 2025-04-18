@@ -22,7 +22,7 @@ logging.basicConfig(
 logging.info("Starting preprocessing...")
 
 ### Text cleaning
-stopwords = set(stopwords.words('english'))
+stop_words = set(stopwords.words('english'))
 
 ### Load dataset
 try:
@@ -36,7 +36,7 @@ def preprocess_text(text):
     text = re.sub(r"[^a-zA-Z\s]", "", text)  # Remove special characters and numbers
     text = text.lower()  
     tokens = word_tokenize(text) 
-    tokens = [word for word in tokens if word not in stopwords.words("english")]  
+    tokens = [word for word in tokens if word not in stop_words]  
 
     return " ".join(tokens)
 
