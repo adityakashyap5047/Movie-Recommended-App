@@ -29,7 +29,7 @@ stop_words = set(stopwords.words('english'))
 
 ### Load dataset
 try:
-    df = pd.read_csv('../data/movies.csv')
+    df = pd.read_csv('movies.csv')
     logging.info("Dataset loaded successfully.")
 except Exception as e:
     logging.error(f"Error loading dataset: {e}")
