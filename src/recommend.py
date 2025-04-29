@@ -1,6 +1,7 @@
 ### Importing dependencies
 import joblib
 import logging
+from preprocess import cosine_sim, df
 
 ### Setting up logging
 logging.basicConfig(
@@ -13,14 +14,6 @@ logging.basicConfig(
 )
 
 logging.info("Starting recommendation...")
-
-try:
-    df = joblib.load('df_cleaned.pkl')
-    cosine_sim = joblib.load('cosine_sim.pkl')
-    logging.info("Data loaded successfully.")
-except Exception as e:
-    logging.error(f"Error loading data: {e}")
-    raise e
 
 def recommend_movies(movie_name, top_n=5):
     logging.info("🎬 Recommending movies for: '%s'", movie_name)
