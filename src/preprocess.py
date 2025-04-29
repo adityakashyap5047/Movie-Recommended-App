@@ -1,9 +1,12 @@
 ### Importing dependencies
 import pandas as pd
 import re
-import nltk
 import joblib
 import logging
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+import numpy as np
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -63,9 +66,9 @@ cosine_sim = cosine_similarity(tfidf_matrix, tfidf_matrix)
 logging.info("Cosine similarity calculated successfully.")
 
 ### Save everything
-joblib.dump(df, 'df_cleaned.pkl')
-joblib.dump(tfidf_matrix, 'tfidf_matrix.pkl')
-joblib.dump(cosine_sim, 'cosine_sim.pkl')
-logging.info("Data Saved to disk.")
+# joblib.dump(df, 'df_cleaned.pkl')
+# joblib.dump(tfidf_matrix, 'tfidf_matrix.pkl')
+# joblib.dump(cosine_sim, 'cosine_sim.pkl')
+# logging.info("Data Saved to disk.")
 
 logging.info("Preprocessing completed successfully.")
