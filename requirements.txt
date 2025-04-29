@@ -5,3 +5,4 @@ scikit-learn
 WordCloud
 nltk
 joblib
+streamlit
