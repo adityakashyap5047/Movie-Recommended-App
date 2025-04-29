@@ -3,6 +3,5 @@ pandas
 matplotlib
 scikit-learn
 WordCloud
-re
 nltk
 joblib
