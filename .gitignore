@@ -1,8 +1,6 @@
 src/config.json
 src/cosine_sim.pkl
-src/df_cleaned.pkl
 src/preprocess.log
 src/recommend.log
-src/tfidf_matrix.pkl
 src/__pycache__/omdb_utils.cpython-311.pyc
 src/__pycache__/recommend.cpython-311.pyc
